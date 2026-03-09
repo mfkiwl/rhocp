@@ -48,7 +48,7 @@ GrainAreaSize::updateArea()
 
       if (_EBSDFileReader){
           // current element
-          Point p = elem->centroid();
+          Point p = elem->true_centroid();
           EBSDAccessFunctors::EBSDPointData data = _EBSDFileReader->getData(p);
           _grain_area[data._feature_id] += elem->volume();
 
